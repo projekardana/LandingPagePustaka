@@ -516,10 +516,22 @@ main {
   color: rgba(255, 255, 255, 0.75);
 }
 
+.footer-links h4,
+.footer-info h4,
+.footer-socials h4 {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
 footer {
   background: var(--primary);
   color: #fff;
   margin-top: 4rem;
+}
+
+footer .container {
+  width: min(1200px, calc(100% - 2rem));
+  margin: 0 auto;
 }
 
 footer a {
@@ -533,25 +545,20 @@ footer a:hover {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
   padding: 3rem 0;
-  border-bottom: 1px solid rgba(255,255,255,.15);
 }
 
-.footer-grid h3 {
+.footer-about h3 {
   margin-bottom: 1rem;
-  color: #fff;
-  font-size: 1.2rem;
 }
 
-.footer-grid p {
-  display: flex;
-  align-items: center;
-  gap: .7rem;
-  margin-bottom: .8rem;
-  color: rgba(255,255,255,.9);
+.footer-about p {
+  margin-bottom: 0.6rem;
+  color: rgba(255,255,255,.85);
 }
+
 
 .footer-grid ul {
   list-style: none;
@@ -573,25 +580,72 @@ footer a:hover {
   padding-left: 5px;
 }
 
-.footer-socials {
+.footer-info h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.footer-info p {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  margin-bottom: .9rem;
+  color: rgba(255,255,255,.85);
+  line-height: 1.6;
+}
+
+.footer-links h3 {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.footer-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: .8rem;
+}
+
+.footer-links a {
+  display: inline-block;
+  color: rgba(255,255,255,.85);
+  text-decoration: none;
+  transition: .3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+  transform: translateX(5px);
+}
+
+.footer-info i {
+  width: 20px;
+  color: var(--accent);
+}
+
+.social-icons {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
 }
 
-.footer-socials a {
+.social-icons a {
   width: 42px;
   height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255,255,255,.15);
   border-radius: 50%;
-  color: #fff;
-  transition: .3s;
+  background: rgba(255,255,255,.15);
+  color: white;
+  transition: 0.3s;
 }
 
-.footer-socials a:hover {
+.social-icons a:hover {
   background: var(--accent);
   color: var(--primary);
   transform: translateY(-4px);
@@ -713,11 +767,11 @@ body.dark-theme .footer-socials a {
     text-align: center;
 }
 
-.footer-grid p {
+  .footer-grid p {
     justify-content: center;
 }
 
-.footer-socials {
+  .footer-socials {
     justify-content: center;
   }
 }
